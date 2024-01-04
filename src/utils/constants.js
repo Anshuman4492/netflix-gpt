@@ -7,8 +7,15 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNjBjZTk5ZjdjYmQ4ZGMzNGU2N2JkODM0OTA0OWQwZiIsInN1YiI6IjYyMmYyZTNiYWZlMjI0MDA3NDg4MDAxYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.1LQNFERbKzxALM62qvKZKcPf40XsWbKcbPxt5Qo5c60",
+    Authorization: "Bearer " + process.env.REACT_APP_TBDB_KEY,
   },
 };
-export const POSTER_CDN_URL = "https://image.tmdb.org/t/p/w500/";
+export const POSTER_CDN_URL = "https://image.tmdb.org/t/p/w500";
+export const BG_URL =
+  "https://assets.nflxext.com/ffe/siteui/vlv3/c31c3123-3df7-4359-8b8c-475bd2d9925d/15feb590-3d73-45e9-9e4a-2eb334c83921/IN-en-20231225-popsignuptwoweeks-perspective_alpha_website_large.jpg";
+export const SUPPORTED_LANGUAGES = [
+  { identifier: "en", name: "English" },
+  { identifier: "hindi", name: "Hindi" },
+  { identifier: "spanish", name: "Spanish" },
+];
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;

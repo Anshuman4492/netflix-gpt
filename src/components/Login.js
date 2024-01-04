@@ -9,7 +9,7 @@ import {
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
-import { USER_AVATAR } from "../utils/constants";
+import { BG_URL, USER_AVATAR } from "../utils/constants";
 const Login = () => {
   const [isSignInForm, setIsSignForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
@@ -38,7 +38,6 @@ const Login = () => {
           const user = userCredential.user;
           // ...
           setErrorMessage("User verified successfully");
-          console.log(user);
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -55,7 +54,6 @@ const Login = () => {
       email.current.value,
       password.current.value
     );
-    console.log(validation);
     if (validation != null) setErrorMessage(validation);
     else {
       setErrorMessage("Validation Successfull");
@@ -68,7 +66,6 @@ const Login = () => {
           // Signed up
           const user = userCredential.user;
           // ...
-          console.log(user);
           updateProfile(user, {
             displayName:
               first_Name.current.value + " " + last_Name.current.value,
@@ -107,14 +104,11 @@ const Login = () => {
     <>
       <Header />
       <div className="absolute">
-        <img
-          alt="background"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/c31c3123-3df7-4359-8b8c-475bd2d9925d/15feb590-3d73-45e9-9e4a-2eb334c83921/IN-en-20231225-popsignuptwoweeks-perspective_alpha_website_large.jpg"
-        />
+        <img className="h-screen object-cover" alt="background" src={BG_URL} />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="p-16 absolute w-4/12 border border-gray-600 bg-black my-24 mx-auto right-0 left-0 text-white rounded-lg opacity-90"
+        className="p-16 absolute w-full md:w-4/12 border border-gray-600 bg-black my-24 mx-auto right-0 left-0 text-white rounded-lg opacity-90"
       >
         <h1 className="font-medium text-3xl p-4 ">
           Sign {isSignInForm ? "In" : "Up"}
