@@ -1,5 +1,5 @@
+import React from "react";
 import { useSelector } from "react-redux";
-import { POSTER_CDN_URL } from "../utils/constants";
 import MovieList from "./MovieList";
 
 const GptSearchSuggesstions = () => {

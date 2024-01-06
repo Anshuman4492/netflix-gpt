@@ -7,6 +7,7 @@ import { LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
 import { auth } from "../utils/firebase";
 import { toggleGptSearchView } from "../utils/gptSlice";
 import { addUser, removeUser } from "../utils/userSlice";
+import React from "react";
 
 function Header() {
   const user = useSelector((store) => store.user);

@@ -1,3 +1,4 @@
+import React from "react";
 import { useSelector } from "react-redux";
 import useGetTopRatedMovies from "../hooks/useGetTopRatedMovies";
 import useGetTrendingMovies from "../hooks/useGetTrendingMovies";

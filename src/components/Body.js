@@ -1,5 +1,7 @@
 import Browse from "./Browse";
 import Login from "./Login";
+import React from "react";
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const Body = () => {
   // const user = auth.currentUser;

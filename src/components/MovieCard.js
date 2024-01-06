@@ -1,4 +1,5 @@
 import { POSTER_CDN_URL } from "../utils/constants";
+import React from "react";
 
 const MovieCard = ({ movieDetails }) => {
   const { backdrop_path, id, original_title, poster_path, title } =
